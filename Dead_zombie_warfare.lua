@@ -125,7 +125,7 @@ gg.removeListItems(pi)
 t = searchEdit(-59*4,32,1999)
 t = searchEdit(-61*4,32,99)
 t = searchEdit(-63*4,32,2999)
-t = searchEdit(-66*4,32,3999)
+t = searchEdit(-66*4,32,19052)
 t = searchEdit(-68*4,32,19052)
 gg.alert("Hack Thành Công😍")
 end
