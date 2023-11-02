@@ -1,4 +1,3 @@
-
 gg.alert("⛔  Bấm Chọn Vào 👉 ( Load Data Game ) Trước Thì Mới Hack Được Nhé  ⛔")
 HOME = 1
 on = "🔵 Load Data Game 🔵"
@@ -125,7 +124,7 @@ gg.removeListItems(pi)
 t = searchEdit(-59*4,32,7000)
 t = searchEdit(-61*4,32,99)
 t = searchEdit(-63*4,32,4505)
-t = searchEdit(-66*4,32,19052)
+t = searchEdit(-66*4,32,10102)
 t = searchEdit(-68*4,32,999999)
 gg.alert("Hack Thành Công😍")
 end
