@@ -1,142 +1,51 @@
-gg.alert("⛔  Bấm Chọn Vào 👉 ( Load Data Game ) Trước Thì Mới Hack Được Nhé  ⛔")
-HOME = 1
-on = "🔵 Load Data Game 🔵"
-off = "👇 Chọn Vào Menu Hack Để Hack 👇"
-A1 = on
-function Mainm()
-  menu = gg.choice({
-    "" .. A1 .. "",
-    "➡️ Menu Hack ⬅️",
-    "⛔ Thoát ⛔"}, nil,"                   ⚡❤Youtube :: Hải Script🍀⚡\
-   ๑۩۞۩๑•❅──────✧❅✦❅✧──────❅•๑۩۞۩๑\
-                          ⚡Mod By Hải Script⚡\
-   ๑۩۞۩๑•❅──────✧❅✦❅✧──────❅•๑۩۞۩๑\
-ㅤㅤ\
-ㅤ ㅤ")
-    if menu == 4 then Exit()
-  elseif menu == nil then
-  elseif menu == 1 then
-    if A1 == on then
-       ad1(on)
-	  A1 = off
-	  gg.toast("๑Đã Load Xong✔๑")
-	Mainm()
-	else
-	loz()
-	end
-	end
-if menu==2 then Namhai() end
-if menu==3 then Exit() end
-  XGCK = -1
-  end
-function ad1(on)
-function searchValue(t,hai1,hai2)
-rt={}
-gg.setRanges(hai1)
-gg.clearResults()
-gg.clearList()
-gg.setVisible(false)
-gg.searchNumber(t[1], hai2)
-local r = gg.getResults(99999999)
-if #r==0 then goto HoangNamHai end
-for it=2,#t do
-for i=1,#r do
-r[i].address=r[i].address+t[it][2]
+function Main()
+HNH = gg.alert('❤Yᴏᴜᴛᴜʙᴇ :: ʜᴀ̉ɪ sᴄʀɪᴘᴛ🍀 ᴠᴇʀsɪᴏɴ 1.0.0\
+🔥Zᴀʟᴏ: 0358184454📲 ┆Mᴇɴᴜ Hᴀᴄᴋ Dᴇᴀᴅʜᴇᴀᴅ Zᴏᴍʙɪᴇ!','๑Hᴀᴄᴋ Dᴏʟᴀ๑','๑Exɪᴛ๑')
+if HNH==1 then a1() end
+if HNH==2 then Exit() end
+XGCK=-1
 end
-local rr=gg.getValues(r)
-tt={}
-for i=1,#rr do
-   if rr[i].value== t[it][1] then
-   ii=#tt+1
-   tt[ii]={}
-   tt[ii].address=rr[i].address-t[it][2]
-   tt[ii].flags=4
-   end
-end
-if #tt==0 then goto HoangNamHai end
-r=gg.getValues(tt)
-if it==#t then rt=r goto HoangNamHai end
-end
-::HoangNamHai::
-return rt
-end
-
-function searchEdit(hnh1,hnh2,hnh3)
-if #r>0 then
-tt={}
-for i=1,#r do
-ii=#tt+1 tt[ii]={}
-tt[ii].address=r[i].address +hnh1
-tt[ii].flags=hnh2
-tt[ii].value=hnh3
-end
-gg.setValues(tt)
-end end
-
-r=searchValue({"81920"},gg.REGION_ANONYMOUS,gg.TYPE_QWORD)
-local prev = gg.getListItems()
-gg.clearList()
+function a1()
+gg.searchNumber("81920", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.addListItems(t)
 t = nil
-gg.saveList("/sdcard/Android/data/HackRoyalMatch.txt", 0)
+local copy = false
+local t = gg.getListItems()
+if not copy then gg.removeListItems(t) end
+for i, v in ipairs(t) do
+	v.address = v.address + 0xffffffffffffff50
+	if copy then v.name = v.name..' #2' end
+end
+gg.addListItems(t)
+t = nil
+copy = nil
+if revert ~= nil then gg.setValues(revert) end
+revert = gg.getListItems()
+local t = gg.getListItems()
+for i, v in ipairs(t) do
+	if v.flags == gg.TYPE_DWORD then
+		v.value = "88888888"
+		v.freeze = true
+		v.freezeType = gg.FREEZE_NORMAL
+	end
+end
+gg.addListItems(t)
+t = nil
 gg.clearList()
-gg.addListItems(prev)
-prev = nil
 gg.clearResults()
 end
-
-
-function loz()
-lozz = gg.choice({
-"๑Load Lại๑",
-"Hủy"
-}, nil, '🔰☛Bạn Muốn Load Lại Menu Không☚🔰')
-if lozz== nil then Mainm() else
-if lozz==1 then ad1()
-gg.toast('🍀Đang Load Lại....') end
-if lozz==2 then Mainm() end
-end
-lozz=-1
-end
-
-
-function Namhai()
-mpp = gg.multiChoice({
-"〖๑Hack Gold๑〗 ✅", 
-"⬅️ Quay Lại⬅️"
-}, nil,'๑۩۞۩๑MOD MEMU VIP๑۩۞۩๑')
-if mpp == nil then else
-if mpp[1] == true then F1() end 
-if mpp[2] == true then Exit() end
-
-end
-mpp=-1
-end
-
-
-function F1()
-gg.clearResults()
-gg.loadList("/sdcard/Android/data/HackRoyalMatch.txt", 0)
-pi = gg.getListItems()
-gg.loadResults(pi)
-gg.removeListItems(pi)
-t = searchEdit(-44*4,32,99999999)
-gg.alert("Hack Thành Công😍")
-end
-
 
 function Exit()
-
 os.exit()
 end
-while(true)do
+while true do
 if gg.isVisible(true) then
-XGCK=1
+XGCK = 1
 gg.setVisible(false)
 end
 gg.clearResults()
-if XGCK==1 then
-Mainm()
+if XGCK == 1 then
+Main()
 end
-end  
+end
