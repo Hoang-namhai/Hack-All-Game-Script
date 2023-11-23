@@ -6,34 +6,59 @@ if HNH==2 then Exit() end
 XGCK=-1
 end
 function a1()
-gg.searchNumber("81920", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.addListItems(t)
-t = nil
-local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-	v.address = v.address + 0xffffffffffffff50
-	if copy then v.name = v.name..' #2' end
+function searchValue(t,hai1,hai2)
+rt={}
+gg.setRanges(hai1)
+gg.clearResults()
+gg.clearList()
+gg.setVisible(false)
+gg.searchNumber(t[1], hai2)
+local r = gg.getResults(99999999)
+if #r==0 then goto HoangNamHai end
+for it=2,#t do
+for i=1,#r do
+r[i].address=r[i].address+t[it][2]
 end
-gg.addListItems(t)
-t = nil
-copy = nil
-if revert ~= nil then gg.setValues(revert) end
-revert = gg.getListItems()
-local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_QWORD then
-		v.value = "88888888"
-		v.freeze = true
-		v.freezeType = gg.FREEZE_NORMAL
-	end
+local rr=gg.getValues(r)
+tt={}
+for i=1,#rr do
+   if rr[i].value== t[it][1] then
+   ii=#tt+1
+   tt[ii]={}
+   tt[ii].address=rr[i].address-t[it][2]
+   tt[ii].flags=4
+   end
 end
-gg.addListItems(t)
-t = nil
+if #tt==0 then goto HoangNamHai end
+r=gg.getValues(tt)
+if it==#t then rt=r goto HoangNamHai end
+end
+::HoangNamHai::
+return rt
+end
+
+function searchEdit(hnh1,hnh2,hnh3)
+if #r>0 then
+tt={}
+for i=1,#r do
+ii=#tt+1 tt[ii]={}
+tt[ii].address=r[i].address +hnh1
+tt[ii].flags=hnh2
+tt[ii].value=hnh3
+end
+gg.setValues(tt)
+end end
+
+
+r=searchValue({"81920",{"1",-43*4},},gg.REGION_ANONYMOUS,gg.TYPE_DWORD)
+if #r == 0 then else
+searchEdit(-44*4,32,88888888)
+gg.toast("🔥Hᴀᴄᴋ Tʜᴀ̀ɴʜ Cᴏ̂ɴɢ🔥")
+gg.clearList()
 gg.clearResults()
 end
+end
+
 
 function Exit()
 os.exit()
