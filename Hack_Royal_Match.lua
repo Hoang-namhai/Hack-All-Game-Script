@@ -1,4 +1,4 @@
-function Main()
+function Main() 
 HNH = gg.alert('❤Yᴏᴜᴛᴜʙᴇ :: ʜᴀ̉ɪ sᴄʀɪᴘᴛ🍀 ᴠᴇʀsɪᴏɴ 1.0.0\
 🔥Zᴀʟᴏ: 0358184454📲 ┆Mᴇɴᴜ Hᴀᴄᴋ Rᴏʏᴀʟ Mᴀᴛᴄʜ','๑Hᴀᴄᴋ Gᴏʟᴅ','๑Exɪᴛ๑')
 if HNH==1 then a1() end
