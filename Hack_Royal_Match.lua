@@ -24,7 +24,7 @@ if revert ~= nil then gg.setValues(revert) end
 revert = gg.getListItems()
 local t = gg.getListItems()
 for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_DWORD then
+	if v.flags == gg.TYPE_QWORD then
 		v.value = "88888888"
 		v.freeze = true
 		v.freezeType = gg.FREEZE_NORMAL
