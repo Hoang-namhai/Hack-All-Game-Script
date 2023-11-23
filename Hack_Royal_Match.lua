@@ -73,7 +73,7 @@ end
 gg.setValues(tt)
 end end
 
-r=searchValue({"81920",{"6291712",-26*4},{"1",2*4},{"524288",3*4}},gg.REGION_ANONYMOUS,gg.TYPE_DWORD)
+r=searchValue({"81920"},gg.REGION_ANONYMOUS,gg.TYPE_QWORD)
 local prev = gg.getListItems()
 gg.clearList()
 local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
