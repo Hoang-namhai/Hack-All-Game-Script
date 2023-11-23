@@ -32,7 +32,6 @@ for i, v in ipairs(t) do
 end
 gg.addListItems(t)
 t = nil
-gg.clearList()
 gg.clearResults()
 end
 
