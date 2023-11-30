@@ -1,5 +1,3 @@
-gg.alert('❤Yᴏᴜᴛᴜʙᴇ :: ʜᴀ̉ɪ sᴄʀɪᴘᴛ🍀 ᴠᴇʀsɪᴏɴ 1.0.0\
-🔥Zᴀʟᴏ: 0358184454📲 ┆Mᴇɴᴜ Hᴀᴄᴋ Sɴᴏᴏᴋᴇʀ Sᴛᴀʀs')
 function searchValue(t,hai1,hai2)
 rt={}
 gg.setRanges(hai1)
@@ -44,12 +42,11 @@ gg.setValues(tt)
 end end
 
 
-r=searchValue({"1899607166",{" 148631994",1*4}},gg.REGION_C_ALLOC,gg.TYPE_DWORD)
+r=searchValue({"1899607166",{" 148631994",1*4}},gg.REGION_ANONYMOUS,gg.TYPE_DWORD)
 if #r == 0 then else
 searchEdit(-3*4,4,888888888)
 searchEdit(54*4,4,888888888)
 gg.clearList()
 gg.toast("🔥Hᴀᴄᴋ Tʜᴀ̀ɴʜ Cᴏ̂ɴɢ🔥")
 gg.clearResults()
-end
 end
