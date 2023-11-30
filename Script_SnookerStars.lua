@@ -1,56 +1,55 @@
 gg.alert('❤Yᴏᴜᴛᴜʙᴇ :: ʜᴀ̉ɪ sᴄʀɪᴘᴛ🍀 ᴠᴇʀsɪᴏɴ 1.0.0\
 🔥Zᴀʟᴏ: 0358184454📲 ┆Mᴇɴᴜ Hᴀᴄᴋ Sɴᴏᴏᴋᴇʀ Sᴛᴀʀs')
-gg.searchNumber("1019191344", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.addListItems(t)
-t = nil
-local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-	v.address = v.address + 0xffffffffffffffec
-	if copy then v.name = v.name..' #2' end
-end
-gg.addListItems(t)
-t = nil
-copy = nil
-revert = gg.getListItems()
-local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_DWORD then
-		v.value = "8888"
-		v.freeze = true
-		v.freezeType = gg.FREEZE_NORMAL
-	end
-end
-gg.addListItems(t)
-t = nil
+function searchValue(t,hai1,hai2)
+rt={}
+gg.setRanges(hai1)
 gg.clearResults()
+gg.clearList()
+gg.setVisible(false)
+gg.searchNumber(t[1], hai2)
+local r = gg.getResults(99999999)
+if #r==0 then goto HoangNamHai end
+for it=2,#t do
+for i=1,#r do
+r[i].address=r[i].address+t[it][2]
+end
+local rr=gg.getValues(r)
+tt={}
+for i=1,#rr do
+   if rr[i].value== t[it][1] then
+   ii=#tt+1
+   tt[ii]={}
+   tt[ii].address=rr[i].address-t[it][2]
+   tt[ii].flags=4
+   end
+end
+if #tt==0 then goto HoangNamHai end
+r=gg.getValues(tt)
+if it==#t then rt=r goto HoangNamHai end
+end
+::HoangNamHai::
+return rt
+end
 
-gg.searchNumber("1019191344", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.addListItems(t)
-t = nil
-local copy = false
-local t = gg.getListItems()
-if not copy then gg.removeListItems(t) end
-for i, v in ipairs(t) do
-	v.address = v.address + 0xffffffffffffffec
-	if copy then v.name = v.name..' #2' end
+function searchEdit(hnh1,hnh2,hnh3)
+if #r>0 then
+tt={}
+for i=1,#r do
+ii=#tt+1 tt[ii]={}
+tt[ii].address=r[i].address +hnh1
+tt[ii].flags=hnh2
+tt[ii].value=hnh3
 end
-gg.addListItems(t)
-t = nil
-copy = nil
-revert = gg.getListItems()
-local t = gg.getListItems()
-for i, v in ipairs(t) do
-	if v.flags == gg.TYPE_DWORD then
-		v.value = "8888"
-		v.freeze = true
-		v.freezeType = gg.FREEZE_NORMAL
-	end
-end
-gg.addListItems(t)
-t = nil
+gg.setValues(tt)
+end end
+
+
+r=searchValue({"1899607166",{" 148631994",1*4}},gg.REGION_C_ALLOC,gg.TYPE_DWORD)
+if #r == 0 then else
+searchEdit(-3*4,4,888888888)
+searchEdit(54*4,4,888888888)
+gg.clearList()
 gg.toast("🔥Hᴀᴄᴋ Tʜᴀ̀ɴʜ Cᴏ̂ɴɢ🔥")
 gg.clearResults()
+end
+end
