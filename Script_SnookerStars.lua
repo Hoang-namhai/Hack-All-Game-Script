@@ -52,5 +52,5 @@ for i, v in ipairs(t) do
 end
 gg.addListItems(t)
 t = nil
+gg.toast("🔥Hᴀᴄᴋ Tʜᴀ̀ɴʜ Cᴏ̂ɴɢ🔥")
 gg.clearResults()
-gg.alert("🔥Hᴀᴄᴋ Tʜᴀ̀ɴʜ Cᴏ̂ɴɢ🔥")
