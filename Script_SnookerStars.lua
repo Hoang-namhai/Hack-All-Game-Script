@@ -34,7 +34,6 @@ t = nil
 gg.toast("🔥Hᴀᴄᴋ Tʜᴀ̀ɴʜ Cᴏ̂ɴɢ🔥")
 gg.clearResults()
 end
-end
 
 
 function Exit()
