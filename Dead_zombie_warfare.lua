@@ -50,7 +50,7 @@ gg.setValues(tt)
 end end
 
 
-r=searchValue({"3342448",{"7667789",-3*4},{"7667789",19*4},},gg.REGION_ANONYMOUS,gg.TYPE_DWORD)
+r=searchValue({"27866224561160304",{"29555366483525709 ",-3*4},},gg.REGION_ANONYMOUS,gg.TYPE_QWORD)
 if #r == 0 then else
 searchEdit(-66*4,32,3500)
 gg.clearList()
