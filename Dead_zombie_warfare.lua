@@ -1,35 +1,11 @@
-gg.alert("⛔  Bấm Chọn Vào 👉 ( Load Data Game ) Trước Thì Mới Hack Được Nhé  ⛔")
-HOME = 1
-on = "🔵 Load Data Game 🔵"
-off = "👇 Chọn Vào Menu Hack Để Hack 👇"
-A1 = on
-function Mainm()
-  menu = gg.choice({
-    "" .. A1 .. "",
-    "➡️ Menu Hack ⬅️",
-    "⛔ Thoát ⛔"}, nil,"                   ⚡❤Youtube :: Hải Script🍀⚡\
-   ๑۩۞۩๑•❅──────✧❅✦❅✧──────❅•๑۩۞۩๑\
-                          ⚡Mod By Hải Script⚡\
-   ๑۩۞۩๑•❅──────✧❅✦❅✧──────❅•๑۩۞۩๑\
-ㅤㅤ\
-ㅤ ㅤ")
-    if menu == 4 then Exit()
-  elseif menu == nil then
-  elseif menu == 1 then
-    if A1 == on then
-       ad1(on)
-	  A1 = off
-	  gg.toast("๑Đã Load Xong✔๑")
-	Mainm()
-	else
-	loz()
-	end
-	end
-if menu==2 then Namhai() end
-if menu==3 then Exit() end
-  XGCK = -1
-  end
-function ad1(on)
+function Main()
+HNH = gg.alert('❤Yᴏᴜᴛᴜʙᴇ :: ʜᴀ̉ɪ sᴄʀɪᴘᴛ🍀 ᴠᴇʀsɪᴏɴ 1.0.0\
+🔥Zᴀʟᴏ: 0358184454📲 ┆Mᴇɴᴜ Hᴀᴄᴋ Dᴇᴀᴅ Aʜᴇᴀᴅ Zᴏᴍʙɪᴇ!','๑Exɪᴛ๑','๑Hᴀᴄᴋ Cᴀsʜ๑')
+if HNH==1 then Exit() end
+if HNH==2 then a1() end
+XGCK=-1
+end
+function a1()
 function searchValue(t,hai1,hai2)
 rt={}
 gg.setRanges(hai1)
@@ -73,75 +49,26 @@ end
 gg.setValues(tt)
 end end
 
+
 r=searchValue({"3342448",{"7667789",-3*4},{"7667789",19*4},},gg.REGION_ANONYMOUS,gg.TYPE_DWORD)
-local prev = gg.getListItems()
+if #r == 0 then else
+searchEdit(-66*4,32,3500)
 gg.clearList()
-local t = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.addListItems(t)
-t = nil
-gg.saveList("/sdcard/Android/data/deadzombiewarfare.txt", 0)
-gg.clearList()
-gg.addListItems(prev)
-prev = nil
 gg.clearResults()
+gg.toast("🔥Hᴀᴄᴋ Tʜᴀ̀ɴʜ Cᴏ̂ɴɢ🔥")
 end
-
-
-function loz()
-lozz = gg.choice({
-"๑Load Lại๑",
-"Hủy"
-}, nil, '🔰☛Bạn Muốn Load Lại Menu Không☚🔰')
-if lozz== nil then Mainm() else
-if lozz==1 then ad1()
-gg.toast('🍀Đang Load Lại....') end
-if lozz==2 then Mainm() end
 end
-lozz=-1
-end
-
-
-function Namhai()
-mpp = gg.multiChoice({
-"〖๑Hack All Full๑〗 ✅", 
-"⬅️ Quay Lại⬅️"
-}, nil,'๑۩۞۩๑MOD MEMU VIP๑۩۞۩๑')
-if mpp == nil then else
-if mpp[1] == true then F1() end 
-if mpp[2] == true then Exit() end
-
-end
-mpp=-1
-end
-
-
-function F1()
-gg.clearResults()
-gg.loadList("/sdcard/Android/data/deadzombiewarfare.txt", 0)
-pi = gg.getListItems()
-gg.loadResults(pi)
-gg.removeListItems(pi)
-t = searchEdit(-59*4,32,4320)
-t = searchEdit(-60*4,32,5)
-t = searchEdit(-61*4,32,35)
-t = searchEdit(-63*4,32,3200)
-t = searchEdit(-66*4,32,8667)
-t = searchEdit(-68*4,32,785182)
-gg.alert("Hack Thành Công😍")
-end
-
 
 function Exit()
-
+gg.alert("❤️Yᴏᴜᴛᴜʙᴇ :: ʜᴀ̉ɪ sᴄʀɪᴘᴛ🍀")
 os.exit()
 end
-while(true)do
+while true do
 if gg.isVisible(true) then
-XGCK=1
+XGCK = 1
 gg.setVisible(false)
 end
-gg.clearResults()
-if XGCK==1 then
-Mainm()
+if XGCK == 1 then
+Main()
 end
-end  
+end
