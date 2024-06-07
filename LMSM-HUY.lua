@@ -60,7 +60,7 @@ end
 gg.setValues(tt)
 end end
 
-r=searchValue({"4673808150518824960",{"4294803575",3*4},},gg.REGION_ANONYMOUS,gg.TYPE_QWORD)
+r=searchValue({"4673808150518824960",{"4294803578",3*4},},gg.REGION_ANONYMOUS,gg.TYPE_QWORD)
 if #r == 0 then else
 searchEdit(0*4,32,4845754888684801592)
 gg.clearResults()
@@ -113,7 +113,7 @@ end
 gg.setValues(tt)
 end end
 
-r=searchValue({"4649500422329860096",{"4294803575",3*4},},gg.REGION_ANONYMOUS,gg.TYPE_QWORD)
+r=searchValue({"4649500422329860096",{"4294803578",3*4},},gg.REGION_ANONYMOUS,gg.TYPE_QWORD)
 if #r == 0 then else
 searchEdit(0*4,32,4845754888684801592) 
 gg.clearResults()
