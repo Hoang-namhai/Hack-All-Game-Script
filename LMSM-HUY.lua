@@ -32,9 +32,9 @@ input = gg.prompt(
 if input and input[1] then
 local message = input[1]
 gg.searchNumber(message, gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL)
-gg.sleep(2000)
+gg.sleep(1000)
 gg.refineNumber(message, gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL)
-gg.sleep(3000)
+gg.sleep(2000)
 gg.refineNumber(message, gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL)
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll('8.88888889e99', gg.TYPE_DOUBLE, false, gg.SIGN_EQUAL)
