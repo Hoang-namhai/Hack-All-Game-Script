@@ -1,8 +1,17 @@
+
+local info = gg.getTargetPackage() 
+if info == "com.vtcmobile.lienminhstickman" then 
+else
+os.exit(print("♥𝑯𝒂̉𝒊 𝑺𝒄𝒓𝒊𝒑𝒕☠️\n \n \n• Vᴜɪ Lᴏ̀ɴɢ Cʜᴏ̣ɴ Đᴜ́ɴɢ Tʀᴏ̀ Cʜᴏ̛ɪ Cᴜ̉ᴀ Sᴄʀɪᴘᴛ •"))
+end 
+
+
 Zzz = 0
 function HOME()
 MENU = gg.choice({
 "🔘  One Hit 💥",
 "🔘  God Mod 💕",
+"🔘  Hướng Dẫn 🧠",
 "🔘  [EXIT]"},nil,"❤Yᴏᴜᴛᴜʙᴇ :: ʜᴀ̉ɪ sᴄʀɪᴘᴛ🍀 ᴠᴇʀsɪᴏɴ 1.1.691\
 🔥Zᴀʟᴏ: 0375574755📲 ┆Mᴇɴᴜ Hᴀᴄᴋ Liên Minh Stickman!\
   ")
@@ -10,7 +19,8 @@ if MENU == nil then
 else
 if MENU == 1 then ONEHIT() end
 if MENU == 2 then GODMOD() end
-if MENU == 3 then EXIT() end
+if MENU == 3 then HD() end
+if MENU == 4 then EXIT() end
 end
 LOL = -1
 end
@@ -65,6 +75,13 @@ gg.editAll('888888888', gg.TYPE_DWORD, false, gg.SIGN_EQUAL)
 gg.clearResults()
 end
 gg.toast('🔥Hᴀᴄᴋ Dᴏɴᴇ🔥')
+end
+
+
+function HD()
+gg.alert("Đầu Tiên Bạn Cần Vào Xem Chỉ Số Trang Bị Của Nhân Vật Cần Hack Và Điền Chỉ Số Trên Trang Bị Vào Script Hack Nhé Số Dame Máu % Theo Thứ Tự. Thanks 😍.")
+gg.alert("Nếu Lỗi Hoặc Không Hack Đc Hãy Liên Hệ Với Mình Zalo: 0375574755!. Số Zalo Đã Được Copy Bạn Có Thể Lên Zalo Dán Và Tìm Kiếm Kết Bạn Với Mình Nhé.")
+gg.copyText("0375574755")
 end
 
 
